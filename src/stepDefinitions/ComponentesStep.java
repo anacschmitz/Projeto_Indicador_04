@@ -84,4 +84,31 @@ public class ComponentesStep {
         componentes.validarCadastroSugestoes();
     }
 
+    //Exercício 02:
+
+    @Quando("o usuário preencher os campos <Nome>, <Sobrenome>")
+    public void o_usuário_preencher_os_campos_Nome_Sobrenome() {
+        componentes.testarNome();
+        componentes.testarSobrenome();
+
+        componentes.validarNome();
+        componentes.validarSobrenome();
+    }
+
+    @Quando("selecionar <Feminino> no campo <Sexo>")
+    public void selecionar_Feminino_no_campo_Sexo() {
+        componentes.validarGenFem();
+        componentes.testarGenFem();
+    }
+
+    @Quando("selecionar <Masculino> no campo <Sexo>")
+    public void selecionar_Masculino_no_campo_Sexo() {
+        componentes.validarGenMasc();
+        componentes.testarGenMasc();
+    }
+
+    @Então("o usuário poderá clicar no botão <cadastrar>")
+    public void o_usuário_poderá_clicar_no_botão_cadastrar() {
+        componentes.validarBotaoCadastrar();
+    }
 }
